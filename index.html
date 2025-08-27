@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -9,14 +8,14 @@
     body {
       font-family: "Times New Roman", serif;
       line-height: 1.8;
-      margin: 40px;
-      background-color: #f9f9f9;
+      margin: 0;
+      background: #f4f4f9;
     }
     .page {
       background: white;
-      padding: 50px;
-      margin: 20px auto;
-      max-width: 800px;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 60px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       border-radius: 8px;
     }
@@ -24,16 +23,26 @@
       text-align: center;
       margin: 20px 0;
     }
+    h1 {
+      font-size: 28px;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: 22px;
+      text-transform: uppercase;
+    }
+    p {
+      text-align: justify;
+    }
+    ul {
+      margin-left: 30px;
+    }
     .cover {
-      text-align: center;
       margin-top: 150px;
+      text-align: center;
     }
     .cover h1 {
-      font-size: 28px;
-    }
-    .cover h2 {
-      margin-top: 20px;
-      font-size: 22px;
+      font-size: 32px;
     }
     .author {
       margin-top: 100px;
@@ -45,11 +54,16 @@
       margin-top: 200px;
       font-size: 16px;
     }
-    ul {
-      margin-left: 30px;
+    .signature {
+      margin-top: 80px;
+      text-align: right;
     }
-    hr {
-      margin: 40px 0;
+    a {
+      color: #2c3e50;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -57,20 +71,31 @@
 
   <!-- Cover -->
   <div class="page cover">
-    <h1>LAPORAN PRAKTIK KERJA LAPANGAN</h1>
-    <h2>TEKNIK KOMPUTER DAN JARINGAN</h2>
+    <h1>LAPORAN<br>PRAKTIK KERJA LAPANGAN</h1>
+    <h2>JURUSAN TEKNIK KOMPUTER DAN JARINGAN</h2>
     
     <div class="author">
       <p>Disusun oleh:</p>
-      <p><strong>Nama: [Isi Nama]</strong></p>
+      <p><strong>Nama: [Isi Nama Siswa]</strong></p>
       <p><strong>Kelas: [Isi Kelas]</strong></p>
       <p><strong>Sekolah: [Isi Sekolah]</strong></p>
     </div>
 
     <div class="footer">
-      <p>Tempat PKL: [Nama Instansi]</p>
+      <p>Tempat PKL: [Nama Instansi/Perusahaan]</p>
       <p>Tahun: 2025</p>
     </div>
+  </div>
+
+  <!-- Lembar Pengesahan -->
+  <div class="page">
+    <h2>LEMBAR PENGESAHAN</h2>
+    <p>Laporan Praktik Kerja Lapangan ini disusun untuk memenuhi salah satu syarat kegiatan Praktik Kerja Lapangan (PKL) siswa jurusan Teknik Komputer dan Jaringan.</p>
+    <p>Disetujui dan disahkan pada:</p>
+    <p style="margin-top:30px;">Pembimbing Sekolah,</p>
+    <p style="margin-top:80px;"><u>[Nama Guru Pembimbing]</u><br>NIP. [Nomor Induk]</p>
+    <p style="margin-top:30px;">Pembimbing Lapangan,</p>
+    <p style="margin-top:80px;"><u>[Nama Pembimbing Lapangan]</u><br>[Jabatan]</p>
   </div>
 
   <!-- Kata Pengantar -->
@@ -80,39 +105,43 @@
       Puji syukur kehadirat Tuhan Yang Maha Esa, atas rahmat dan karunia-Nya sehingga penulis dapat menyelesaikan laporan Praktik Kerja Lapangan (PKL) ini dengan baik.
     </p>
     <p>
-      Laporan ini disusun untuk memenuhi salah satu syarat kegiatan PKL yang dilaksanakan di [Nama Instansi].
+      Laporan ini disusun sebagai bentuk pertanggungjawaban siswa setelah melaksanakan PKL di [Nama Instansi]. Semoga laporan ini dapat memberikan gambaran pengalaman yang bermanfaat.
     </p>
     <p>
       Penulis menyadari laporan ini masih jauh dari sempurna. Oleh karena itu, penulis mengharapkan kritik dan saran yang membangun.
     </p>
-    <p>
-      Semoga laporan ini dapat bermanfaat bagi semua pihak.
-    </p>
-    <p style="text-align: right;">[Kota], [Tanggal]<br><br>Penyusun</p>
+    <p class="signature">[Kota], [Tanggal]<br><br>Penyusun</p>
   </div>
 
   <!-- Daftar Isi -->
   <div class="page">
     <h2>DAFTAR ISI</h2>
     <ul>
-      <li>Kata Pengantar</li>
-      <li>Bab I: Pendahuluan</li>
-      <li>Bab II: Profil Tempat PKL</li>
-      <li>Bab III: Kegiatan PKL</li>
-      <li>Bab IV: Penutup</li>
+      <li><a href="#bab1">Bab I: Pendahuluan</a></li>
+      <li><a href="#bab2">Bab II: Profil Tempat PKL</a></li>
+      <li><a href="#bab3">Bab III: Kegiatan PKL</a></li>
+      <li><a href="#bab4">Bab IV: Penutup</a></li>
+      <li><a href="#pustaka">Daftar Pustaka</a></li>
+      <li><a href="#lampiran">Lampiran</a></li>
     </ul>
   </div>
 
   <!-- Bab I -->
-  <div class="page">
+  <div class="page" id="bab1">
     <h2>BAB I<br>PENDAHULUAN</h2>
     <p>
-      Pada bab ini dijelaskan latar belakang, tujuan, serta manfaat dari kegiatan PKL yang dilakukan oleh siswa di [Nama Instansi].
+      Bab ini menjelaskan latar belakang, tujuan, dan manfaat dari kegiatan PKL yang dilakukan di [Nama Instansi].
     </p>
+    <p><strong>1.1 Latar Belakang</strong></p>
+    <p>[Tuliskan latar belakang PKL]</p>
+    <p><strong>1.2 Tujuan</strong></p>
+    <p>[Tuliskan tujuan PKL]</p>
+    <p><strong>1.3 Manfaat</strong></p>
+    <p>[Tuliskan manfaat PKL]</p>
   </div>
 
   <!-- Bab II -->
-  <div class="page">
+  <div class="page" id="bab2">
     <h2>BAB II<br>PROFIL TEMPAT PKL</h2>
     <p>
       Bab ini berisi profil singkat tempat PKL, meliputi sejarah berdiri, visi misi, struktur organisasi, dan kegiatan utama instansi.
@@ -120,25 +149,44 @@
   </div>
 
   <!-- Bab III -->
-  <div class="page">
+  <div class="page" id="bab3">
     <h2>BAB III<br>KEGIATAN PKL</h2>
-    <p>
-      Dalam bab ini dijelaskan kegiatan yang dilakukan selama PKL, antara lain:
-    </p>
+    <p>Selama PKL, penulis melaksanakan berbagai kegiatan, antara lain:</p>
     <ul>
       <li>Instalasi perangkat keras dan lunak</li>
       <li>Perawatan jaringan komputer</li>
       <li>Konfigurasi perangkat jaringan</li>
-      <li>Pembuatan laporan teknis</li>
+      <li>Pembuatan dokumentasi teknis</li>
     </ul>
   </div>
 
   <!-- Bab IV -->
-  <div class="page">
+  <div class="page" id="bab4">
     <h2>BAB IV<br>PENUTUP</h2>
     <p>
-      Demikian laporan PKL ini dibuat dengan sebenar-benarnya. Penulis berharap laporan ini dapat memberikan manfaat bagi pembaca.
+      Demikian laporan PKL ini disusun dengan sebenar-benarnya. Semoga dapat memberikan manfaat bagi pembaca.
     </p>
+  </div>
+
+  <!-- Daftar Pustaka -->
+  <div class="page" id="pustaka">
+    <h2>DAFTAR PUSTAKA</h2>
+    <p>
+      [Tuliskan referensi buku, artikel, atau sumber lain yang digunakan]
+    </p>
+  </div>
+
+  <!-- Lampiran -->
+  <div class="page" id="lampiran">
+    <h2>LAMPIRAN</h2>
+    <p>
+      Dokumentasi kegiatan PKL:
+    </p>
+    <ul>
+      <li>Foto kegiatan</li>
+      <li>Struktur organisasi</li>
+      <li>Hasil kerja</li>
+    </ul>
   </div>
 
 </body>
