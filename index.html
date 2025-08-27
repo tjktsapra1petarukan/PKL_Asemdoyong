@@ -2,89 +2,53 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Laporan PKL - Teknik Komputer dan Jaringan</title>
+  <title>Laporan PKL</title>
   <style>
     body {
       font-family: "Times New Roman", serif;
       margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #2c3e50;
-      line-height: 1.6;
+      background: #eaeaea; /* warna abu biar ada kontras */
     }
 
     section {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 60px 80px;
-      min-height: 100vh;
+      background: white;
+      width: 21cm; /* ukuran A4 */
+      min-height: 29.7cm;
+      margin: 20px auto;
+      padding: 3cm 2.5cm; /* margin isi halaman */
+      border: 1px solid #2c3e50;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      box-sizing: border-box;
     }
 
     h1, h2, h3 {
       text-align: center;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 32px;
-      text-transform: uppercase;
-    }
-
-    h2 {
-      font-size: 24px;
-      color: #2c3e50;
+      margin-bottom: 15px;
     }
 
     p {
       text-align: justify;
-      margin-bottom: 15px;
-      font-size: 16px;
+      font-size: 14pt;
+      line-height: 1.6;
+      margin-bottom: 12px;
     }
 
     ul {
       margin-left: 25px;
-    }
-
-    .cover {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .cover h1 {
-      font-size: 34px;
-      margin-bottom: 20px;
-    }
-
-    .cover h2 {
-      margin-top: 10px;
-      margin-bottom: 40px;
-    }
-
-    .author {
-      margin-top: 50px;
-      font-size: 18px;
-    }
-
-    .footer {
-      margin-top: 100px;
-      font-size: 16px;
+      font-size: 14pt;
     }
 
     .page-break {
       page-break-after: always;
     }
 
-    /* Print styling */
     @media print {
-      body {
-        background: #fff;
-      }
+      body { background: none; }
       section {
+        margin: 0;
+        border: 1px solid black;
         box-shadow: none;
+        page-break-after: always;
       }
     }
   </style>
@@ -92,35 +56,34 @@
 <body>
 
   <!-- Cover -->
-  <section class="cover page-break">
+  <section class="page-break">
     <h1>LAPORAN PRAKTIK KERJA LAPANGAN</h1>
     <h2>TEKNIK KOMPUTER DAN JARINGAN</h2>
-    <div class="author">
-      <p>Disusun oleh:</p>
-      <p><strong>Nama: [Isi Nama]</strong></p>
-      <p><strong>Kelas: [Isi Kelas]</strong></p>
-      <p><strong>Sekolah: [Isi Sekolah]</strong></p>
-    </div>
-    <div class="footer">
-      <p>Tempat PKL: [Nama Instansi]</p>
-      <p>Tahun: 2025</p>
-    </div>
+    <br><br>
+    <p style="text-align:center;">Disusun oleh:</p>
+    <p style="text-align:center;"><strong>Nama: [Isi Nama]</strong></p>
+    <p style="text-align:center;"><strong>Kelas: [Isi Kelas]</strong></p>
+    <p style="text-align:center;"><strong>Sekolah: [Isi Sekolah]</strong></p>
+    <br><br><br>
+    <p style="text-align:center;">Tempat PKL: [Nama Instansi]</p>
+    <p style="text-align:center;">Tahun: 2025</p>
   </section>
 
   <!-- Kata Pengantar -->
   <section class="page-break">
     <h2>KATA PENGANTAR</h2>
     <p>
-      Puji syukur penulis panjatkan kehadirat Tuhan Yang Maha Esa karena berkat rahmat dan karunia-Nya, penulis dapat menyelesaikan laporan Praktik Kerja Lapangan (PKL) ini tepat pada waktunya.
+      Puji syukur penulis panjatkan ke hadirat Tuhan Yang Maha Esa,
+      berkat rahmat-Nya laporan PKL ini dapat diselesaikan.
     </p>
     <p>
-      Laporan ini disusun sebagai salah satu bentuk pertanggungjawaban atas kegiatan PKL yang dilaksanakan di [Nama Instansi]. Isi laporan mencakup latar belakang, tujuan, kegiatan yang dilakukan, serta manfaat yang diperoleh selama PKL berlangsung.
+      Laporan ini disusun untuk memenuhi salah satu syarat kegiatan PKL
+      yang dilaksanakan di [Nama Instansi]. Penulis menyampaikan terima kasih
+      kepada semua pihak yang telah membantu selama kegiatan PKL berlangsung.
     </p>
     <p>
-      Penulis mengucapkan terima kasih kepada pihak sekolah, pembimbing PKL, serta seluruh staf [Nama Instansi] yang telah memberikan kesempatan, bimbingan, dan arahan selama kegiatan berlangsung.
-    </p>
-    <p>
-      Penulis menyadari laporan ini masih jauh dari sempurna, oleh karena itu kritik dan saran yang membangun sangat diharapkan demi perbaikan di masa mendatang.
+      Penulis menyadari laporan ini masih jauh dari sempurna,
+      oleh karena itu kritik dan saran sangat diharapkan.
     </p>
     <p style="text-align:right">[Kota], [Tanggal]<br><br><em>Penyusun</em></p>
   </section>
@@ -129,23 +92,19 @@
   <section class="page-break">
     <h2>BAB I - PENDAHULUAN</h2>
     <p><strong>1.1 Latar Belakang</strong></p>
-    <p>
-      Praktik Kerja Lapangan (PKL) merupakan kegiatan yang wajib dilaksanakan oleh siswa SMK sebagai bentuk pembelajaran berbasis dunia kerja. Melalui PKL, siswa dapat mengaplikasikan ilmu yang dipelajari di sekolah serta memperoleh pengalaman kerja nyata.
-    </p>
+    <p>[Isi latar belakang...]</p>
 
     <p><strong>1.2 Tujuan</strong></p>
     <ul>
-      <li>Mengaplikasikan teori yang diperoleh di sekolah ke dalam dunia kerja nyata.</li>
-      <li>Melatih keterampilan teknis dalam bidang Teknik Komputer dan Jaringan.</li>
-      <li>Menumbuhkan sikap disiplin, tanggung jawab, dan kerja sama.</li>
-      <li>Membekali siswa dengan pengalaman kerja sebagai persiapan setelah lulus.</li>
+      <li>Mengaplikasikan teori ke dunia kerja nyata.</li>
+      <li>Menambah keterampilan di bidang TKJ.</li>
+      <li>Melatih sikap disiplin dan tanggung jawab.</li>
     </ul>
 
     <p><strong>1.3 Manfaat</strong></p>
     <ul>
-      <li>Menambah wawasan dan keterampilan teknis di bidang IT.</li>
-      <li>Melatih kesiapan menghadapi tantangan di dunia kerja.</li>
-      <li>Membangun hubungan baik antara sekolah dengan instansi.</li>
+      <li>Menambah pengalaman kerja nyata.</li>
+      <li>Memperluas wawasan teknologi.</li>
     </ul>
   </section>
 
@@ -153,67 +112,17 @@
   <section class="page-break">
     <h2>BAB II - PROFIL TEMPAT PKL</h2>
     <p><strong>2.1 Sejarah Singkat</strong></p>
-    <p>
-      [Nama Instansi] adalah lembaga yang bergerak di bidang [isi bidang], berdiri sejak tahun [tahun berdiri]. Instansi ini terus berkembang dan berperan penting dalam mendukung layanan [sesuaikan bidang instansi].
-    </p>
-
+    <p>[Isi sejarah instansi...]</p>
     <p><strong>2.2 Visi dan Misi</strong></p>
-    <p><em>Visi:</em> Menjadi instansi yang profesional, modern, dan unggul di bidang teknologi informasi.</p>
+    <p><em>Visi:</em> [isi visi]</p>
     <p><em>Misi:</em></p>
     <ul>
-      <li>Meningkatkan kualitas layanan berbasis teknologi.</li>
-      <li>Mengembangkan sumber daya manusia yang kompeten.</li>
-      <li>Mendukung perkembangan IT di masyarakat.</li>
-    </ul>
-
-    <p><strong>2.3 Struktur Organisasi</strong></p>
-    <p>
-      Struktur organisasi [Nama Instansi] terdiri dari pimpinan, staf, serta divisi-divisi pendukung seperti Administrasi, Keuangan, dan Teknologi Informasi. Penulis ditempatkan di divisi Teknologi Informasi.
-    </p>
-
-    <p><strong>2.4 Kegiatan Utama</strong></p>
-    <p>
-      Kegiatan utama instansi meliputi penyediaan layanan teknologi, perawatan jaringan komputer, dan dukungan teknis kepada pengguna.
-    </p>
-  </section>
-
-  <!-- Bab III -->
-  <section class="page-break">
-    <h2>BAB III - KEGIATAN PKL</h2>
-    <p>Selama melaksanakan PKL di [Nama Instansi], penulis mengikuti berbagai kegiatan, di antaranya:</p>
-    <ul>
-      <li>Perakitan dan perawatan perangkat keras komputer.</li>
-      <li>Instalasi dan konfigurasi sistem operasi serta aplikasi.</li>
-      <li>Instalasi dan troubleshooting jaringan LAN/WLAN.</li>
-      <li>Konfigurasi router, switch, dan access point.</li>
-      <li>Pembuatan dokumentasi dan laporan teknis.</li>
-    </ul>
-    <p>
-      Dari kegiatan tersebut, penulis memperoleh pengalaman berharga yang dapat menjadi bekal di dunia kerja.
-    </p>
-  </section>
-
-  <!-- Bab IV -->
-  <section class="page-break">
-    <h2>BAB IV - PENUTUP</h2>
-    <p>
-      Laporan PKL ini disusun berdasarkan pengalaman penulis selama melaksanakan kegiatan di [Nama Instansi]. Penulis mendapatkan banyak ilmu, keterampilan, serta pengalaman baru dalam bidang Teknik Komputer dan Jaringan.
-    </p>
-    <p>
-      Semoga laporan ini dapat bermanfaat bagi penulis, sekolah, maupun pembaca lainnya. Kritik dan saran sangat diharapkan untuk perbaikan di masa mendatang.
-    </p>
-  </section>
-
-  <!-- Lampiran -->
-  <section>
-    <h2>LAMPIRAN</h2>
-    <p>Dokumentasi kegiatan PKL:</p>
-    <ul>
-      <li>Foto kegiatan</li>
-      <li>Struktur organisasi instansi</li>
-      <li>Contoh hasil kerja</li>
+      <li>[Misi 1]</li>
+      <li>[Misi 2]</li>
     </ul>
   </section>
 
+  <!-- dst. Bab III, IV, Lampiran -->
+  
 </body>
 </html>
