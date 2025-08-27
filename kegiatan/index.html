@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Laporan PKL</title>
+  <style>
+    body {
+      font-family: "Times New Roman", serif;
+      margin: 0;
+      background: #eaeaea;
+    }
+
+    section {
+      background: white;
+      width: 21cm; /* ukuran A4 */
+      min-height: 29.7cm;
+      margin: 20px auto;
+      padding: 3cm 2.5cm;
+      border: 1px solid #2c3e50;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    p {
+      text-align: justify;
+      font-size: 14pt;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      margin-left: 25px;
+      font-size: 14pt;
+    }
+
+    .page-break {
+      page-break-after: always;
+    }
+
+    /* Nomor halaman otomatis */
+    section::after {
+      counter-increment: page;
+      content: counter(page);
+      position: absolute;
+      bottom: 1.5cm;
+      right: 2.5cm;
+      font-size: 12pt;
+      color: #555;
+    }
+
+    body {
+      counter-reset: page;
+    }
+
+    /* Daftar isi */
+    .toc {
+      font-size: 14pt;
+    }
+    .toc a {
+      text-decoration: none;
+      color: #2c3e50;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dotted #888;
+      margin-bottom: 8px;
+    }
+    .toc a:hover {
+      color: #f39c12;
+    }
+
+    @media print {
+      body { background: none; }
+      section {
+        margin: 0;
+        border: 1px solid black;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover -->
+  <section class="page-break" id="cover">
+    <h1>LAPORAN PRAKTIK KERJA LAPANGAN</h1>
+    <h2>TEKNIK KOMPUTER DAN JARINGAN</h2>
+    <br><br>
+    <p style="text-align:center;">Disusun oleh:</p>
+    <p style="text-align:center;"><strong>Nama: [Isi Nama]</strong></p>
+    <p style="text-align:center;"><strong>Kelas: [Isi Kelas]</strong></p>
+    <p style="text-align:center;"><strong>Sekolah: [Isi Sekolah]</strong></p>
+    <br><br><br>
+    <p style="text-align:center;">Tempat PKL: [Nama Instansi]</p>
+    <p style="text-align:center;">Tahun: 2025</p>
+  </section>
+
+  <!-- Daftar Isi -->
+  <section class="page-break" id="daftarisi">
+    <h2>DAFTAR ISI</h2>
+    <div class="toc">
+      <a href="#pengantar"><span>Kata Pengantar</span><span>ii</span></a>
+      <a href="#bab1"><span>BAB I Pendahuluan</span><span>1</span></a>
+      <a href="#bab2"><span>BAB II Profil Tempat PKL</span><span>5</span></a>
+      <a href="#bab3"><span>BAB III Kegiatan PKL</span><span>9</span></a>
+      <a href="#bab4"><span>BAB IV Penutup</span><span>12</span></a>
+      <a href="#lampiran"><span>Lampiran</span><span>14</span></a>
+    </div>
+  </section>
+
+  <!-- Kata Pengantar -->
+  <section class="page-break" id="pengantar">
+    <h2>KATA PENGANTAR</h2>
+    <p>
+      Puji syukur ke hadirat Tuhan Yang Maha Esa,
+      berkat rahmat-Nya laporan PKL ini dapat diselesaikan.
+    </p>
+    <p>
+      Laporan ini disusun untuk memenuhi salah satu syarat kegiatan PKL
+      yang dilaksanakan di [Nama Instansi].
+    </p>
+    <p>
+      Penulis menyadari laporan ini masih jauh dari sempurna,
+      oleh karena itu kritik dan saran sangat diharapkan.
+    </p>
+    <p style="text-align:right">[Kota], [Tanggal]<br><br><em>Penyusun</em></p>
+  </section>
+
+  <!-- Bab I -->
+  <section class="page-break" id="bab1">
+    <h2>BAB I - PENDAHULUAN</h2>
+    <p><strong>1.1 Latar Belakang</strong></p>
+    <p>[Isi latar belakang...]</p>
+    <p><strong>1.2 Tujuan</strong></p>
+    <ul>
+      <li>Mengaplikasikan teori ke dunia kerja nyata.</li>
+      <li>Menambah keterampilan di bidang TKJ.</li>
+      <li>Melatih sikap disiplin dan tanggung jawab.</li>
+    </ul>
+    <p><strong>1.3 Manfaat</strong></p>
+    <ul>
+      <li>Menambah pengalaman kerja nyata.</li>
+      <li>Memperluas wawasan teknologi.</li>
+    </ul>
+  </section>
+
+  <!-- Bab II -->
+  <section class="page-break" id="bab2">
+    <h2>BAB II - PROFIL TEMPAT PKL</h2>
+    <p><strong>2.1 Sejarah Singkat</strong></p>
+    <p>[Isi sejarah instansi...]</p>
+    <p><strong>2.2 Visi dan Misi</strong></p>
+    <p><em>Visi:</em> [isi visi]</p>
+    <p><em>Misi:</em></p>
+    <ul>
+      <li>[Misi 1]</li>
+      <li>[Misi 2]</li>
+    </ul>
+  </section>
+
+  <!-- Bab III -->
+  <section class="page-break" id="bab3">
+    <h2>BAB III - KEGIATAN PKL</h2>
+    <ul>
+      <li>Instalasi perangkat keras dan lunak</li>
+      <li>Perawatan jaringan komputer</li>
+      <li>Konfigurasi perangkat jaringan</li>
+      <li>Pembuatan laporan teknis</li>
+    </ul>
+  </section>
+
+  <!-- Bab IV -->
+  <section class="page-break" id="bab4">
+    <h2>BAB IV - PENUTUP</h2>
+    <p>Demikian laporan PKL ini disusun dengan sebenar-benarnya.
+       Semoga bermanfaat bagi pembaca.</p>
+  </section>
+
+  <!-- Lampiran -->
+  <section id="lampiran">
+    <h2>LAMPIRAN</h2>
+    <ul>
+      <li>Foto kegiatan</li>
+      <li>Struktur organisasi</li>
+      <li>Hasil kerja</li>
+    </ul>
+  </section>
+
+</body>
+</html>
