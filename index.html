@@ -3,198 +3,112 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Profil PKL – BODONG GEONG | TJKT</title>
-  <meta name="description" content="Profil singkat PKL [Nama Siswa] – tautan cepat ke Kegiatan PKL, Laporan Lengkap, dan Makalah.">
-  <meta property="og:title" content="Profil PKL – BODONG GEONG" />
-  <meta property="og:description" content="Tautan cepat ke Kegiatan PKL, Laporan Lengkap, dan Makalah." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0f172a" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Tautan Profesional</title>
   <style>
-    :root{
-      --bg:#0b1020;/*slate-950*/
-      --panel:#0f172a;/*slate-900*/
-      --muted:#94a3b8;/*slate-400*/
-      --text:#e5e7eb;/*zinc-200*/
-      --brand:#22c55e;/*green-500*/
-      --brand-2:#38bdf8;/*sky-400*/
-      --ring:rgba(56,189,248,.5);
+    :root {
+      --bg: #0f172a;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent1: #22c55e;
+      --accent2: #3b82f6;
+      --accent3: #a855f7;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%;}
-    body{
-      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background: radial-gradient(1200px 800px at 80% -10%, rgba(56,189,248,.12), transparent 60%),
-                  radial-gradient(1000px 700px at 10% 110%, rgba(34,197,94,.10), transparent 60%),
-                  var(--bg);
-      color:var(--text);
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #020617 100%);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
-    .wrap{min-height:100%; display:grid; place-items:center; padding:32px}
-    .card{
-      width:min(960px,100%); background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      border:1px solid rgba(148,163,184,.2); border-radius:24px; padding:28px; backdrop-filter: blur(8px);
-      box-shadow:0 10px 40px rgba(0,0,0,.35);
+
+    .container {
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.05);
+      animation: fadeIn 1s ease-out;
     }
-    header{display:flex; gap:20px; align-items:center; padding:8px 8px 16px; border-bottom:1px dashed rgba(148,163,184,.25)}
-    .avatar{width:96px; height:96px; border-radius:20px; border:1px solid rgba(148,163,184,.35); overflow:hidden; flex:0 0 auto}
-    .avatar img{width:100%; height:100%; object-fit:cover}
-    .id{display:flex; flex-direction:column; gap:6px}
-    .id h1{font-size:24px; margin:0; letter-spacing:.2px}
-    .meta{display:flex; flex-wrap:wrap; gap:10px; color:var(--muted); font-size:14px}
-    .badge{padding:4px 10px; border:1px solid rgba(148,163,184,.25); border-radius:999px}
 
-    .about{padding:18px 8px 6px; color:#cbd5e1; line-height:1.7}
-
-    .links{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-top:16px}
-    .link{
-      position:relative; border:1px solid rgba(148,163,184,.25); background:rgba(2,6,23,.5);
-      padding:16px 16px; border-radius:16px; text-decoration:none; color:var(--text);
-      display:flex; align-items:center; gap:14px; transition:.2s transform, .2s border-color, .2s box-shadow;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    .link:hover{transform:translateY(-2px); border-color:rgba(56,189,248,.7); box-shadow:0 8px 24px rgba(56,189,248,.18)}
-    .icn{width:36px; height:36px; border-radius:10px; display:grid; place-items:center; background:rgba(56,189,248,.15); border:1px solid rgba(56,189,248,.35)}
-    .link .title{font-weight:600}
-    .link .desc{font-size:13px; color:var(--muted)}
-    .cta{margin-top:8px}
 
-    /* footer */
-    footer{margin-top:20px; padding-top:14px; border-top:1px dashed rgba(148,163,184,.25); display:flex; justify-content:space-between; align-items:center; color:var(--muted); font-size:13px}
-    .social{display:flex; gap:10px}
-    .social a{display:grid; place-items:center; width:36px; height:36px; border-radius:10px; border:1px solid rgba(148,163,184,.25); color:var(--text); text-decoration:none}
-    .social a:hover{border-color:rgba(34,197,94,.6)}
-
-    /* page frame when printed */
-    @page{size:A4; margin:18mm}
-    .print-sheet{background:#fff; color:#111; border:1px solid #ccc; border-radius:12px; padding:18px}
-
-    /* small helper label */
-    .slug{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:12px; color:#a3a3a3}
-
-    /* responsive tweaks */
-    @media (max-width:560px){
-      header{flex-direction:column; align-items:flex-start}
-      .avatar{width:80px; height:80px}
-      .id h1{font-size:20px}
+    h1 {
+      font-size: 32px;
+      margin-bottom: 12px;
+      background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
+
+    p {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .links {
+      display: grid;
+      gap: 16px;
+    }
+
+    .link {
+      display: block;
+      padding: 16px;
+      border-radius: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .link::before {
+      content: "";
+      position: absolute;
+      top: 0; left: -100%; bottom: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.2);
+      transform: skewX(-20deg);
+    }
+
+    .link:hover::before {
+      left: 100%;
+      transition: left 0.7s ease;
+    }
+
+    .link:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.4); }
+
+    .link small { display: block; font-weight: 400; opacity: 0.85; margin-top: 2px; }
+
+    .link-a { background: linear-gradient(135deg, #16a34a, #22c55e); }
+    .link-b { background: linear-gradient(135deg, #2563eb, #3b82f6); }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <div class="card" role="region" aria-label="Profil PKL">
-<header>
-  <div class="avatar">
-    <!-- Ganti src ke file lokal -->
-    <img src="galeri/profile.jpg" alt="Foto [Nama Siswa]" />
-  </div>
-        <div class="id">
-          <h1>BODONG GEONG <span class="slug">| TJKT</span></h1>
-          <div class="meta">
-            <span class="badge">SMK SATYA PRAJA 1 PETARUKAN • Kelas XII</span>
-            <span class="badge">PKL di PT. ADEAKSA INDOJAYATAMA [DEXANET]</span>
-            <span class="badge">Tahun 2025</span>
-          </div>
-        </div>
-      </header>
-
-      <section class="about">
-        <p>
-          Halo! Ini adalah halaman profil singkat kegiatan <strong>Praktik Kerja Lapangan (PKL)</strong> saya.
-          Di bawah ini ada tautan ringkas (short link) menuju <em>Kegiatan Harian PKL</em>,
-          <em>Laporan PKL versi lengkap</em>, dan <em>Makalah</em>. Seluruh tautan dibuat human-friendly
-          agar mudah diingat dan diakses dari perangkat apa pun.
-        </p>
-      </section>
-
-      <section class="links" aria-label="Tautan Cepat">
-        <!-- 1) KEGIATAN PKL -->
-        <a class="link" href="./kegiatan/" title="Jurnal / Logbook Kegiatan PKL" target="_self">
-          <span class="icn" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 4h10a3 3 0 0 1 3 3v13l-5-3-5 3V7a3 3 0 0 1 3-3z" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
-          </span>
-          <div>
-            <div class="title">kegiatan</div>
-            <div class="desc">Jurnal harian, tugas, dokumentasi lapangan</div>
-            <div class="slug">/kegiatan</div>
-          </div>
-        </a>
-
-        <!-- 2) LAPORAN LENGKAP (HTML) -->
-        <a class="link" href="./laporan/" title="Laporan PKL versi HTML" target="_self">
-          <span class="icn" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M14 2v5h5" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
-          </span>
-          <div>
-            <div class="title">laporan</div>
-            <div class="desc">Laporan PKL lengkap, siap cetak</div>
-            <div class="slug">/laporan</div>
-          </div>
-        </a>
-
-        <!-- 3) MAKALAH (PDF) -->
-        <a class="link" href="./makalah.pdf" title="Makalah / Paper PKL (PDF)" target="_blank" rel="noopener">
-          <span class="icn" aria-hidden="true" style="background:rgba(34,197,94,.15);border-color:rgba(34,197,94,.35)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
-          </span>
-          <div>
-            <div class="title">makalah</div>
-            <div class="desc">File PDF (ringkas 5–10 halaman)</div>
-            <div class="slug">/makalah.pdf</div>
-          </div>
-        </a>
-
-        <!-- 4) DOKUMENTASI FOTO (opsional) -->
-        <a class="link" href="./galeri/" title="Galeri Foto PKL" target="_self">
-          <span class="icn" aria-hidden="true" style="background:rgba(250,204,21,.18);border-color:rgba(250,204,21,.4)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 7h3l2-3h6l2 3h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5"/>
-              <circle cx="12" cy="13" r="3" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
-          </span>
-          <div>
-            <div class="title">galeri</div>
-            <div class="desc">Foto kegiatan, before/after, perangkat</div>
-            <div class="slug">/galeri</div>
-          </div>
-        </a>
-      </section>
-
-      <section class="cta">
-        <p style="color:var(--muted); font-size:13px; margin:10px 8px 0">
-          Tip: struktur direktori GitHub Pages yang direkomendasikan:
-        </p>
-        <div class="print-sheet" style="margin-top:8px">
-<pre style="margin:0; white-space:pre-wrap"><code>PKL_Asemdoyong/
-├── index.html              ← halaman profil (file ini)
-├── kegiatan/               ← halaman-jurnal (HTML/MD/img)
-│   └── index.html
-├── laporan/                ← laporan lengkap (HTML per halaman)
-│   └── index.html
-├── galeri/                 ← foto-foto kegiatan
-│   └── index.html
-└── makalah.pdf             ← makalah versi PDF
-</code></pre>
-        </div>
-      </section>
-
-      <footer>
-        <span>© 2025 • [Nama Siswa] • SMK [Nama Sekolah]</span>
-        <nav class="social" aria-label="Sosial">
-          <a href="mailto:tjktsaprapetarukan@gmail.com" title="Email">@</a>
-          <a href="https://wa.me/6289619750647" target="_blank" rel="noopener" title="WhatsApp">WA</a>
-          <a href="https://github.com/tjktsapra1petarukan/PKL_Asemdoyong" target="_blank" rel="noopener" title="GitHub">GH</a>
-        </nav>
-      </footer>
+  <div class="container">
+    <h1>SMK SATYA PRAJA 1 PETARUKAN</h1>
+    <p>Profile PRAKTIK KERJA LAPANGAN:</p>
+    <div class="links">
+      <a class="link link-a" href="FARHAN_ABBAS.html" target="_blank" rel="noopener noreferrer">
+        Kunjungi Link FARHAN ABBAS
+      </a>
+      <a class="link link-b" href="SENIOR_NINO_HAFIL.html" target="_blank" rel="noopener noreferrer">
+        Kunjungi Link SENIOR NINO HAFIL
+      </a>
     </div>
-  </main>
+  </div>
 </body>
 </html>
