@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tautan TJKT SMK SATYA PRAJA 1 PETARUKAN</title>
+  <title>Tautan TJKT SMK SATYA PRAJA 1 PETARUKAN</title>
   <style>
     :root {
       --bg: #0f172a;
@@ -12,101 +12,183 @@
       --accent1: #22c55e;
       --accent2: #3b82f6;
       --accent3: #a855f7;
+      --glass: rgba(15, 23, 42, 0.75);
     }
 
     * { box-sizing: border-box; }
     html, body { height: 100%; margin: 0; }
     body {
       font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #020617 100%);
+      background: linear-gradient(135deg, #0f172a, #1e293b, #020617);
       color: var(--text);
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 20px;
+      overflow: hidden;
+    }
+
+    /* Animasi background */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.5;
+      animation: float 12s ease-in-out infinite;
+      z-index: 0;
+    }
+    .orb.green { width: 400px; height: 400px; background: #22c55e44; top: -100px; left: -120px; animation-delay: 0s; }
+    .orb.blue { width: 500px; height: 500px; background: #3b82f644; bottom: -200px; right: -150px; animation-delay: 3s; }
+    .orb.purple { width: 300px; height: 300px; background: #a855f744; top: 50%; left: 50%; transform: translate(-50%, -50%); animation-delay: 6s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-40px) scale(1.05); }
     }
 
     .container {
-      background: rgba(15, 23, 42, 0.8);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 40px 30px;
+      position: relative;
+      z-index: 1;
+      background: var(--glass);
+      backdrop-filter: blur(14px) saturate(150%);
+      border-radius: 28px;
+      padding: 45px 35px;
       text-align: center;
-      max-width: 480px;
+      max-width: 560px;
       width: 100%;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      border: 1px solid rgba(255,255,255,0.05);
-      animation: fadeIn 1s ease-out;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6), inset 0 0 20px rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      animation: fadeIn 1.2s ease-out;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(40px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Logo pakai gambar */
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+      animation: spin 12s linear infinite;
+    }
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @keyframes spin { 
+      from { transform: rotate(0deg); } 
+      to { transform: rotate(360deg); } 
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 36px;
       margin-bottom: 12px;
+      font-weight: 800;
       background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent3));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      letter-spacing: 1px;
     }
 
     p {
-      font-size: 15px;
+      font-size: 17px;
       color: var(--muted);
-      margin-bottom: 30px;
+      margin-bottom: 38px;
     }
 
     .links {
       display: grid;
-      gap: 16px;
+      gap: 20px;
     }
 
     .link {
-      display: block;
-      padding: 16px;
-      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 22px;
+      border-radius: 18px;
       font-weight: 600;
       text-decoration: none;
       color: white;
-      transition: transform 0.2s ease, box-shadow 0.3s ease;
       position: relative;
       overflow: hidden;
+      transition: all 0.35s ease;
     }
+
+    .link span {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .link strong { font-size: 19px; }
+    .link small { font-weight: 400; opacity: 0.85; font-size: 13px; }
+
+    .link svg {
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+      transition: transform 0.35s ease;
+    }
+
+    .link:hover svg { transform: translateX(6px) scale(1.1); }
 
     .link::before {
       content: "";
       position: absolute;
-      top: 0; left: -100%; bottom: 0;
-      width: 100%;
-      background: rgba(255,255,255,0.2);
-      transform: skewX(-20deg);
+      inset: 0;
+      background: linear-gradient(120deg, rgba(255,255,255,0.25), transparent 60%);
+      transform: translateX(-100%);
     }
 
     .link:hover::before {
-      left: 100%;
-      transition: left 0.7s ease;
+      transform: translateX(100%);
+      transition: transform 0.8s ease;
     }
 
-    .link:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.4); }
+    .link:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 12px 30px rgba(0,0,0,0.45); }
 
-    .link small { display: block; font-weight: 400; opacity: 0.85; margin-top: 2px; }
-
+    /* Variasi warna tombol */
     .link-a { background: linear-gradient(135deg, #16a34a, #22c55e); }
     .link-b { background: linear-gradient(135deg, #2563eb, #3b82f6); }
   </style>
 </head>
 <body>
+  <!-- Background glowing orbs -->
+  <div class="orb green"></div>
+  <div class="orb blue"></div>
+  <div class="orb purple"></div>
+
   <div class="container">
-    <h1>SMK SATYA PRAJA 1 PETARUKAN</h1>
-    <p>Profile PRAKTIK KERJA LAPANGAN:</p>
+    <div class="logo">
+      <img src="https://scontent.fcxp2-1.fna.fbcdn.net/v/t39.30808-6/239641600_214773993991262_1673303661287780008_n.png?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGPSWr7FJlCbA5vWvfvhG4Ljt4emeWBJN6O3h6Z5YEk3oQCXOLTBDA-SFLssB9mdBxFBUDQuEJ2gykTOb-pgfgX&_nc_ohc=osOQ6izCbwIQ7kNvwEgvxsP&_nc_oc=AdkSlCpeDc6gRZWCgWSlbhw7D1ZD0WFAuj84ZSn9zwSHto3908ttzA6P7aqd-r64a88&_nc_zt=23&_nc_ht=scontent.fcxp2-1.fna&_nc_gid=vWEbV3hoDsLtXX2XbJwIcQ&oh=00_AfVeAeVNak8XgxHupC6IRF52iyCi0xz3eaKf0Wqlc1t8yQ&oe=68B59902" alt="Logo TJKT">
+    </div>
+    <h1>SMK SATYA PRAJA 1 PETARUKAN</h1>
+    <p>Profil Praktik Kerja Lapangan (PKL)</p>
     <div class="links">
       <a class="link link-a" href="FARHAN_ABBAS.html" target="_blank" rel="noopener noreferrer">
-        FARHAN ABBAS
+        <span>
+          <strong>FARHAN ABBAS</strong>
+          <small>Dokumentasi & Kegiatan</small>
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
       </a>
       <a class="link link-b" href="SENIOR_NINO_HAFIL.html" target="_blank" rel="noopener noreferrer">
-        SENIOR NINO HAFIL
+        <span>
+          <strong>SENIOR NINO HAFIL</strong>
+          <small>Dokumentasi & Kegiatan</small>
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
       </a>
     </div>
   </div>
